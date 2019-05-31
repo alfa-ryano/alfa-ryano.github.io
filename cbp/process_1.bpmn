@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- origin at X=0.0 Y=0.0 -->
+<bpmn2:definitions xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ext="http://org.eclipse.bpmn2/ext" id="cbp_1" exporter="org.eclipse.bpmn2.modeler.core" exporterVersion="1.5.1" targetNamespace="http://org.eclipse.bpmn2/default/process">
+  <bpmn2:process id="process_1" name="Default Process" isExecutable="false">
+    <bpmn2:startEvent id="cbp_2" name="Start Event 1">
+      <bpmn2:outgoing>cbp_15</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="cbp_4" name="End Event 1">
+      <bpmn2:incoming>cbp_16</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:task id="cbp_14" name="Task A">
+      <bpmn2:incoming>cbp_15</bpmn2:incoming>
+      <bpmn2:outgoing>cbp_16</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:sequenceFlow id="cbp_15" sourceRef="cbp_2" targetRef="cbp_14"/>
+    <bpmn2:sequenceFlow id="cbp_16" sourceRef="cbp_14" targetRef="cbp_4"/>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="cbp_5" name="Default Process Diagram">
+    <bpmndi:BPMNPlane id="cbp_6" bpmnElement="process_1">
+      <bpmndi:BPMNShape id="cbp_7" bpmnElement="cbp_2">
+        <dc:Bounds height="36.0" width="36.0" x="100.0" y="100.0"/>
+        <bpmndi:BPMNLabel id="cbp_8" labelStyle="cbp_13">
+          <dc:Bounds height="16.0" width="75.0" x="81.0" y="136.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="cbp_11" bpmnElement="cbp_4">
+        <dc:Bounds height="36.0" width="36.0" x="500.0" y="100.0"/>
+        <bpmndi:BPMNLabel id="cbp_12" labelStyle="cbp_13">
+          <dc:Bounds height="16.0" width="70.0" x="483.0" y="136.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_1" bpmnElement="cbp_14" isExpanded="true">
+        <dc:Bounds height="50.0" width="110.0" x="235.0" y="85.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_4" labelStyle="cbp_13">
+          <dc:Bounds height="16.0" width="41.0" x="269.0" y="102.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_2" bpmnElement="cbp_15" sourceElement="cbp_7" targetElement="BPMNShape_Task_1">
+        <di:waypoint xsi:type="dc:Point" x="136.0" y="118.0"/>
+        <di:waypoint xsi:type="dc:Point" x="185.0" y="118.0"/>
+        <di:waypoint xsi:type="dc:Point" x="185.0" y="110.0"/>
+        <di:waypoint xsi:type="dc:Point" x="235.0" y="110.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_5"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_3" bpmnElement="cbp_16" sourceElement="BPMNShape_Task_1" targetElement="cbp_11">
+        <di:waypoint xsi:type="dc:Point" x="345.0" y="110.0"/>
+        <di:waypoint xsi:type="dc:Point" x="422.0" y="110.0"/>
+        <di:waypoint xsi:type="dc:Point" x="422.0" y="118.0"/>
+        <di:waypoint xsi:type="dc:Point" x="500.0" y="118.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_6"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="cbp_13">
+      <dc:Font name="arial" size="9.0"/>
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn2:definitions>
