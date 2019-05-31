@@ -21,11 +21,11 @@ function play() {
 function stop() {
     clearTimeout(timer)
 
-    var encoder = new mxCodec();
+    /* var encoder = new mxCodec();
     var node1 = encoder.encode(graphs.get("ECORE").getModel());
     mxUtils.popup(mxUtils.getPrettyXml(node1), false);
     var node2 = encoder.encode(graphs.get("BPMN2").getModel());
-    mxUtils.popup(mxUtils.getPrettyXml(node2), false);
+    mxUtils.popup(mxUtils.getPrettyXml(node2), false); */
 }
 
 
