@@ -1,42 +1,32 @@
-<register epackage="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI"/>
-<create eclass="DocumentRoot" epackage="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="cbp_0"/>
-<add-to-eattribute eclass="DocumentRoot" name="mixed" position="0" target="cbp_0"><value literal="bpmn2:definitions=org.eclipse.bpmn2.impl.DefinitionsImpl@713b2ee9 (id: cbp_1, anyAttribute: null) (exporter: org.eclipse.bpmn2.modeler.core, exporterVersion: 1.5.1, expressionLanguage: http://www.w3.org/1999/XPath, name: null, targetNamespace: http://org.eclipse.bpmn2/default/process, typeLanguage: http://www.w3.org/2001/XMLSchema)"/></add-to-eattribute>
-<add-to-resource eclass="DocumentRoot" position="0"><value eclass="DocumentRoot" eobject="cbp_0"/></add-to-resource>
-<create eclass="Definitions" epackage="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="cbp_1"/>
-<set-ereference eclass="DocumentRoot" name="definitions" target="cbp_0"><value eclass="Definitions" eobject="cbp_1"/></set-ereference>
-<create eclass="Process" epackage="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="process_1"/>
-<set-eattribute eclass="Process" name="name" target="process_1"><value literal="Process 1"/></set-eattribute>
-<add-to-ereference eclass="Definitions" name="rootElements" position="0" target="cbp_1"><value eclass="Process" eobject="process_1"/></add-to-ereference>
-<set-eattribute eclass="Process" name="name" target="process_1"><old-value literal="Process 1"/><value literal="Default Process"/></set-eattribute>
-<create eclass="StartEvent" epackage="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="cbp_2"/>
-<set-eattribute eclass="StartEvent" name="name" target="cbp_2"><value literal="Start Event 1"/></set-eattribute>
-<add-to-ereference eclass="Process" name="flowElements" position="0" target="process_1"><value eclass="StartEvent" eobject="cbp_2"/></add-to-ereference>
-<create eclass="SequenceFlow" epackage="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="cbp_3"/>
-<set-eattribute eclass="SequenceFlow" name="name" target="cbp_3"><value literal="Sequence Flow 1"/></set-eattribute>
-<add-to-ereference eclass="Process" name="flowElements" position="1" target="process_1"><value eclass="SequenceFlow" eobject="cbp_3"/></add-to-ereference>
-<create eclass="EndEvent" epackage="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="cbp_4"/>
-<set-eattribute eclass="EndEvent" name="name" target="cbp_4"><value literal="End Event 1"/></set-eattribute>
-<add-to-ereference eclass="Process" name="flowElements" position="2" target="process_1"><value eclass="EndEvent" eobject="cbp_4"/></add-to-ereference>
-<add-to-ereference eclass="StartEvent" name="outgoing" position="0" target="cbp_2"><value eclass="SequenceFlow" eobject="cbp_3"/></add-to-ereference>
-<add-to-ereference eclass="EndEvent" name="incoming" position="0" target="cbp_4"><value eclass="SequenceFlow" eobject="cbp_3"/></add-to-ereference>
-<set-eattribute eclass="Definitions" name="targetNamespace" target="cbp_1"><value literal="http://org.eclipse.bpmn2/default/process"/></set-eattribute>
-<unset-ereference eclass="SequenceFlow" name="sourceRef" target=""><old-value eclass="StartEvent" eobject="cbp_2"/></unset-ereference>
-<remove-from-ereference eclass="StartEvent" name="outgoing" position="0" target="cbp_2"><value eclass="SequenceFlow" eobject=""/></remove-from-ereference>
-<unset-ereference eclass="SequenceFlow" name="targetRef" target=""><old-value eclass="EndEvent" eobject="cbp_4"/></unset-ereference>
-<remove-from-ereference eclass="EndEvent" name="incoming" position="0" target="cbp_4"><value eclass="SequenceFlow" eobject=""/></remove-from-ereference>
-<unset-eattribute composite="_Ya__EIIcEem4x7A5v81ncQ" eclass="SequenceFlow" name="id" target=""><old-value literal="cbp_3"/></unset-eattribute>
+<create eclass="Process" epackage="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="e1"/>
+<set-eattribute eclass="Process" name="name" target="e1"><value literal="Process 1"/></set-eattribute>
+<add-to-resource eclass="Process" position="0"><value eclass="Process" eobject="e1"/></add-to-resource>
+<create eclass="StartEvent" epackage="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="e2"/>
+<add-to-ereference eclass="Process" name="flowElements" position="0" target="e1"><value eclass="StartEvent" eobject="e2"/></add-to-ereference>
+<create eclass="SequenceFlow" epackage="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="e3"/>
+<set-eattribute eclass="SequenceFlow" name="name" target="e3"><value literal="Sequence Flow 1"/></set-eattribute>
+<add-to-ereference eclass="Process" name="flowElements" position="1" target="e1"><value eclass="SequenceFlow" eobject="e3"/></add-to-ereference>
+<create eclass="EndEvent" epackage="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="e4"/>
+<add-to-ereference eclass="Process" name="flowElements" position="2" target="e1"><value eclass="EndEvent" eobject="e4"/></add-to-ereference>
+<add-to-ereference eclass="StartEvent" name="outgoing" position="0" target="e2"><value eclass="SequenceFlow" eobject="e3"/></add-to-ereference>
+<add-to-ereference eclass="EndEvent" name="incoming" position="0" target="e4"><value eclass="SequenceFlow" eobject="e3"/></add-to-ereference>
+<unset-ereference eclass="SequenceFlow" name="sourceRef" target=""><old-value eclass="StartEvent" eobject="e2"/></unset-ereference>
+<remove-from-ereference eclass="StartEvent" name="outgoing" position="0" target="e2"><value eclass="SequenceFlow" eobject=""/></remove-from-ereference>
+<unset-ereference eclass="SequenceFlow" name="targetRef" target=""><old-value eclass="EndEvent" eobject="e4"/></unset-ereference>
+<remove-from-ereference eclass="EndEvent" name="incoming" position="0" target="e4"><value eclass="SequenceFlow" eobject=""/></remove-from-ereference>
+<unset-eattribute composite="_Ya__EIIcEem4x7A5v81ncQ" eclass="SequenceFlow" name="id" target=""><old-value literal="e3"/></unset-eattribute>
 <unset-eattribute composite="_Ya__EIIcEem4x7A5v81ncQ" eclass="SequenceFlow" name="name" target=""><old-value literal="Sequence Flow 1"/></unset-eattribute>
-<remove-from-ereference composite="_Ya__EIIcEem4x7A5v81ncQ" eclass="Process" name="flowElements" position="1" target="process_1"><value eclass="SequenceFlow" eobject=""/></remove-from-ereference>
-<delete composite="_Ya__EIIcEem4x7A5v81ncQ" eclass="SequenceFlow" epackage="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="cbp_3"/>
-<create eclass="Task" epackage="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="cbp_14"/>
-<set-eattribute eclass="Task" name="name" target="cbp_14"><value literal="Task 1"/></set-eattribute>
-<add-to-ereference eclass="Process" name="flowElements" position="2" target="process_1"><value eclass="Task" eobject="cbp_14"/></add-to-ereference>
-<create eclass="SequenceFlow" epackage="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="cbp_15"/>
-<add-to-ereference eclass="StartEvent" name="outgoing" position="0" target="cbp_2"><value eclass="SequenceFlow" eobject="cbp_15"/></add-to-ereference>
-<add-to-ereference eclass="Task" name="incoming" position="0" target="cbp_14"><value eclass="SequenceFlow" eobject="cbp_15"/></add-to-ereference>
-<add-to-ereference eclass="Process" name="flowElements" position="3" target="process_1"><value eclass="SequenceFlow" eobject="cbp_15"/></add-to-ereference>
-<create eclass="SequenceFlow" epackage="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="cbp_16"/>
-<add-to-ereference eclass="Task" name="outgoing" position="0" target="cbp_14"><value eclass="SequenceFlow" eobject="cbp_16"/></add-to-ereference>
-<add-to-ereference eclass="EndEvent" name="incoming" position="0" target="cbp_4"><value eclass="SequenceFlow" eobject="cbp_16"/></add-to-ereference>
-<add-to-ereference eclass="Process" name="flowElements" position="4" target="process_1"><value eclass="SequenceFlow" eobject="cbp_16"/></add-to-ereference>
-<set-eattribute eclass="Task" name="name" target="cbp_14"><old-value literal="Task 1"/><value literal="Task A"/></set-eattribute>
+<remove-from-ereference composite="_Ya__EIIcEem4x7A5v81ncQ" eclass="Process" name="flowElements" position="1" target="e1"><value eclass="SequenceFlow" eobject=""/></remove-from-ereference>
+<delete composite="_Ya__EIIcEem4x7A5v81ncQ" eclass="SequenceFlow" epackage="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="e3"/>
+<create eclass="Task" epackage="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="e5"/>
+<set-eattribute eclass="Task" name="name" target="e5"><value literal="Task 1"/></set-eattribute>
+<add-to-ereference eclass="Process" name="flowElements" position="2" target="e1"><value eclass="Task" eobject="e5"/></add-to-ereference>
+<create eclass="SequenceFlow" epackage="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="e6"/>
+<add-to-ereference eclass="StartEvent" name="outgoing" position="0" target="e2"><value eclass="SequenceFlow" eobject="e6"/></add-to-ereference>
+<add-to-ereference eclass="Task" name="incoming" position="0" target="e5"><value eclass="SequenceFlow" eobject="e6"/></add-to-ereference>
+<add-to-ereference eclass="Process" name="flowElements" position="3" target="e1"><value eclass="SequenceFlow" eobject="e6"/></add-to-ereference>
+<create eclass="SequenceFlow" epackage="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" id="e7"/>
+<add-to-ereference eclass="Task" name="outgoing" position="0" target="e5"><value eclass="SequenceFlow" eobject="e7"/></add-to-ereference>
+<add-to-ereference eclass="EndEvent" name="incoming" position="0" target="e4"><value eclass="SequenceFlow" eobject="e7"/></add-to-ereference>
+<add-to-ereference eclass="Process" name="flowElements" position="4" target="e1"><value eclass="SequenceFlow" eobject="e7"/></add-to-ereference>
+<set-eattribute eclass="Task" name="name" target="e5"><old-value literal="Task 1"/><value literal="Task A"/></set-eattribute>
